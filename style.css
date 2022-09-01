@@ -43,7 +43,8 @@ body{
 .menu{
     padding-top: 22px;
     padding-left: 375px;
-    padding-right: 10px; 
+    padding-right: 10px;
+    margin-left: 0px; 
     font-weight: bold;
     font-size: 15px;
     cursor: default;
@@ -241,23 +242,42 @@ a:hover{
 }
 @media (min-width: 1000px) and (max-width: 1800px) {  
 
+    .area-cabecalho{
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+        align-items: center;
+    }
+    .login{
+        margin-bottom: 10px
+    }
+    .registrar_menu{
+        margin-bottom: 10px;
+    }
+    
     .menu{
-        padding-top: 22px;
-        padding-left: 375px;
-        padding-right: 10px; 
+        display: flex;
+        padding-top: 15px;
+        padding-right: 10px;
         font-weight: bold;
         font-size: 15px;
+        align-items: center;
         cursor: default;
     }
+    .menu > a{
+        margin-bottom: 10px;
+    }
     .conteudo{
-        padding-top: 5.6%;
-        padding-left: 4.7%;
-        width: 500px;
+        padding: 0;
+        max-width: 500px;
         height: 193px;
         padding-bottom: 6%;
+        margin-top: 8%;
+        margin-left: 9%;
     }
     .boasVindas{
-        padding-left: 4.7%;
+        padding: 0;
+        margin-left: 9%;
         font-size: 0.9em;
         color: #333333;
         vertical-align: baseline;
@@ -274,5 +294,17 @@ a:hover{
         padding: 1.8% 7%;
         cursor: pointer;
         transition: all 200ms ease-in-out;
+    }
+    .bolinha{
+       margin-top: 80px;
+    }
+    .bolinha > button{
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        background-color:transparent;
+        border: 2px solid black; 
+        border-radius: 50px;
     }
 }    
