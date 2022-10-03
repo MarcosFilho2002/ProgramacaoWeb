@@ -418,3 +418,40 @@ a:hover{
      }
     
 }    
+/*Segunda parte do projeto*/
+.aleatorio{
+    display: flex;
+    flex-wrap: wrap;
+}
+.aleatorio li{
+    list-style: none;
+    align-items: center;
+}
+.aleatorio p{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.aleatorio img{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.cartaInput{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cartaInput li{
+    list-style: none;
+    align-items: center;
+}
+.cartaInput p{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.cartaInput img{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+
