@@ -32,4 +32,11 @@ document.querySelector('.cartaNome').addEventListener('click', async () =>{
     li.appendChild(img);
     container2.appendChild(li);
 });
-//card name: The Noodle Art of Savory - verso de carta, mas gigante... pensar se usa.
+
+
+document.querySelector('.verso-carta').addEventListener('click', async () =>{
+    let json = await axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php');
+    document.querySelector('.verso-carta').src = json.data.card_images[0].image_url_small;
+})
+
+//https://ygoprodeck.com/api-guide/
