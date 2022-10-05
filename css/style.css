@@ -419,6 +419,18 @@ a:hover{
     
 }    
 /*Segunda parte do projeto*/
+.conteudo-api{
+    margin-top: 150px;
+}
+.cabecalho-api{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.conteudo-api img.logo{
+    width: 300px;
+}
 .aleatorio{
     display: flex;
     flex-wrap: wrap;
@@ -437,6 +449,9 @@ a:hover{
     width: 168px;
     height: 246px;
 }
+.margem-left-10px{
+    margin-left: 10px; 
+}
 
 .cartaInput{
     display: flex;
@@ -451,6 +466,13 @@ a:hover{
     margin-left: 10px;
 }
 .cartaInput img{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 168px;
+    height: 246px;
+}
+
+.verso-carta{
     margin-top: 10px;
     margin-left: 10px;
     width: 168px;

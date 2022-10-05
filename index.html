@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/icone2.png">
     <title>Betway - Apostas Online: Cassino e Esportes</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
     <body>
         <div class="main">
@@ -53,6 +54,25 @@
             </div>
             
             <div class="bolinha"><button></button></div>
+
+            <div class="conteudo-api">
+                <div class="cabecalho-api">
+                    <a href="http://yugiohtracker.com/#/newCards" target="_blank"><img src="./images/Yu-Gi-Oh_Logo.webp" class="logo"></a>
+                </div> 
+                <label for="busca" class="margem-left-10px">Nome da carta:</label>
+                <br>
+                <input class="cardName margem-left-10px" type="text" name="busca" value="" required>
+                <button class="cartaNome">Pesquisar</button>
+                <ul class="cartaInput"></ul>
+                <br><br>
+                <button class="cartaAleatoria margem-left-10px">Carta Aleatória</button>
+                <ul class="aleatorio"></ul>
+            </div>
+            <div>
+                <img src="./images/verso_carta.jpg" alt="" class="verso-carta">
+            </div>
+        </div>    
+        <script src="./javascript/script.js"></script>  
         </div> <!--FIM MAIN-->       
     </body>
 </html>
