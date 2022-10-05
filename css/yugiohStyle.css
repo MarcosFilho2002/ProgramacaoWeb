@@ -252,6 +252,13 @@ a:hover{
     height: 246px;
 }
 
+.cartaAleatoria{
+    margin-left: 10px;  
+}
+
+.cardName{
+    margin-left: 10px;    
+}
 .cartaInput{
     display: flex;
     flex-wrap: wrap;
