@@ -38,5 +38,28 @@ document.querySelector('.verso-carta').addEventListener('click', async () =>{
     let json = await axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php');
     document.querySelector('.verso-carta').src = json.data.card_images[0].image_url_small;
 })
-
+document.querySelector('.verso-carta2').addEventListener('click', async () =>{
+    let json = await axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php');
+    document.querySelector('.verso-carta2').src = json.data.card_images[0].image_url_small;
+})
+document.querySelector('.verso-carta3').addEventListener('click', async () =>{
+    let json = await axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php');
+    document.querySelector('.verso-carta3').src = json.data.card_images[0].image_url_small;
+})
+document.querySelector('.verso-carta4').addEventListener('click', async () =>{
+    let json = await axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php');
+    document.querySelector('.verso-carta4').src = json.data.card_images[0].image_url_small;
+})
+document.querySelector('.verso-carta5').addEventListener('click', async () =>{
+    let json = await axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php');
+    document.querySelector('.verso-carta5').src = json.data.card_images[0].image_url_small;
+})
+document.querySelector('.verso-carta6').addEventListener('click', async () =>{
+    let json = await axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php');
+    document.querySelector('.verso-carta6').src = json.data.card_images[0].image_url_small;
+})
+document.querySelector('.verso-carta7').addEventListener('click', async () =>{
+    let json = await axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php');
+    document.querySelector('.verso-carta7').src = json.data.card_images[0].image_url_small;
+})
 //https://ygoprodeck.com/api-guide/
