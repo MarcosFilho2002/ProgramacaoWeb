@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/icone2.png">
     <title>Betway - Apostas Online: Cassino e Esportes</title>
-<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-=======
-    <script src="https://unpkg.com/axios@1.0.0/dist/axios.min.js"></script>
->>>>>>> 33851d785d077918058e4d12d328188d771203e9
 </head>
     <body>
+        <div class="container-login">
+            <form class="form-login">
+                <div class="div-login">
+                    <input type="text" placeholder="Email" class="input-email">
+                    <input type="password" placeholder="Senha" class="input-senha">
+                    <br>
+                    <button type="button" class="btn-entrar">Entrar</button>
+                    <button type="button" class="btn-fechar">Fechar</button>
+                </div>
+            </form>
+        </div>
         <div class="main">
             <div class="area-cabecalho">
                 <div class="logo-menu">
@@ -61,7 +68,7 @@
 
             <div class="conteudo-api">
                 <div class="cabecalho-api">
-                    <a href="http://yugiohtracker.com/#/newCards" target="_blank"><img src="./images/Yu-Gi-Oh_Logo.webp" class="logo"></a>
+                    <a href="http://yugiohtracker.com/#/newCards" target="_blank"><img src="./images/Yu-Gi-Oh_Logo.webp" class="logo logo-yugioh"></a>
                 </div> 
                 <label for="busca" class="margem-left-10px">Nome da carta:</label>
                 <br>
@@ -72,7 +79,7 @@
                 <button class="cartaAleatoria margem-left-10px">Carta Aleatória</button>
                 <ul class="aleatorio"></ul>
             </div>
-            <div>
+            <div class="container-cartas">
                 <img src="./images/verso_carta.jpg" alt="" class="verso-carta">
                 <img src="./images/verso_carta.jpg" alt="" class="verso-carta2">
                 <img src="./images/verso_carta.jpg" alt="" class="verso-carta3">
@@ -80,9 +87,10 @@
                 <img src="./images/verso_carta.jpg" alt="" class="verso-carta5">
                 <img src="./images/verso_carta.jpg" alt="" class="verso-carta6">
                 <img src="./images/verso_carta.jpg" alt="" class="verso-carta7">
+                <img src="./images/verso_carta.jpg" alt="" class="verso-carta8">
             </div>
         </div>    
-        <script src="./javascript/script.js"></script>  
         </div> <!--FIM MAIN-->       
+        <script src="./javascript/script.js"></script>  
     </body>
 </html>
