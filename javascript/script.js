@@ -105,7 +105,12 @@ async function login(email,senha){
             alert('Login realizado com sucesso!');
             console.log(response.data.token);
             localStorage.setItem('token', response.data.token);
-            document.location.reload(true);
+            let conteudoApi = document.querySelector('.conteudo-api');
+            conteudoApi.style.display = 'block';
+            let containerCartas = document.querySelector('.container-cartas');
+            containerCartas.style.display = 'block';
+            let containerLogin = document.querySelector('.container-login');
+            containerLogin.style.display = 'none';
 
         })
         .catch(function(error){
