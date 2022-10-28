@@ -31,6 +31,16 @@
                     <button type="button" class="btn-fechar">Fechar</button>
                 </div>
             </form>
+            <div class="estado-login">
+                <div class="login-efetuado">
+                    <p>Login efetuado com sucesso!</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                    </svg>
+                    
+                </div>
+            </div>
         </div>
         <div class="main">
             <div class="area-cabecalho">
@@ -80,12 +90,21 @@
 
             <div class="conteudo-api">
                 <div class="cabecalho-api">
-                    <a href="http://yugiohtracker.com/#/newCards" target="_blank"><img src="./images/Yu-Gi-Oh_Logo.webp" class="logo logo-yugioh"></a>
+                    <a href="https://ygoprodeck.com/card-database/?&sort=name&num=24&offset=0" target="_blank"><img src="./images/Yu-Gi-Oh_Logo.webp" class="logo logo-yugioh"></a>
                 </div> 
                 <label for="busca" class="margem-left-10px">Nome da carta:</label>
                 <br>
-                <input class="cardName margem-left-10px" type="text" name="busca" value="" required>
+                
+                <input class="cardName margem-left-10px" type="text" name="busca" value="" list="cartas" required>
+                <datalist id="cartas">
+
+                </datalist>
                 <button class="cartaNome">Pesquisar</button>
+                <!-- 
+                <select name="Lista-de-cartas" id="cartas">
+                    <option value="cartas" selected>Cartas</option>
+                </select>
+                -->
                 <ul class="cartaInput"></ul>
                 <br><br>
                 <button class="cartaAleatoria margem-left-10px">Carta Aleatória</button>

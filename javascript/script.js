@@ -70,11 +70,8 @@ document.querySelector('.verso-carta8').addEventListener('click', async () =>{
 });
 
 //Search
-document.querySelector(".cardName")
-.addEventListener("keyup", async () => {
-    let busca = this.value;
-    let cardname = document.querySelector(".cardName").value;
-    let cartas = await axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
+async function carregaCartas(){
+    let cartas = axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
     .then(function (response) {
         console.log(response.data.data);
         console.log(response.data.data[0].name);
@@ -83,53 +80,15 @@ document.querySelector(".cardName")
         for(let i = 0; i < tamanhoArray; i++){
             todasCartas.push(response.data.data[i].name);
         }
-        console.log(todasCartas);
-        todasCartas.filter((cardname) =>{
-            const valorMinusculo = valor.toLowerCase();  
-            const cidadeMinusculo = valor.toLowerCase();
-        })
-    })
-    .catch(function(error){
-        console.log('Error: '+error);
+
+        todasCartas.forEach(element => {
+            let select = document.querySelector("#cartas");
+            select.append(new Option(element,element));
+            console.log(element);
+        });
     });
-    
-    /*console.log(cidades[0].innerHTML.search(busca));
-    for(let i = 0; i < cidades.length; i++){
-        if (cidades[i].innerHTML.search(busca) >= 0) {
-            cidades[i].style.display = "block";
-        }else{
-            cidades[i].style.display = "none";
-        }
-    }
-    */
-});
-/*
-function autoComplete(cidade) {
-    const destino = ['Salvador', 'Vitória', 'Maceió', 'Ceará','Rio Branco','Macapá', 'Porto Velho', 'Olinda','Aracaju','Capitólio','São Paulo', 'Paraty'];        
-    return destino.filter((valor) => {                
-        const valorMinusculo = valor.toLowerCase()                
-        const cidadeMinusculo = cidade.toLowerCase()                
-        return valorMinusculo.includes(cidadeMinusculo)          
-    })   
-}  
-const campo = document.querySelector('.campo')  
-const sugestoes = document.querySelector('.sugestoes')  
-campo.addEventListener('input', ({ target }) => {      
-    const dadosDoCampo = target.value      
-    if(dadosDoCampo.length) {         
-        const autoCompleteValores = autoComplete(dadosDoCampo)         
-        sugestoes.innerHTML = 
-        `${autoCompleteValores.map((value) => {     
-            return ( `<li>${value}</li>`)
-        })
-        .join('')}
-        `
-    }}
-);
-*/
-
-
-
+};
+carregaCartas();
 
 
 //https://reqres.in
@@ -158,6 +117,8 @@ document.querySelector('.btn-fechar').addEventListener('click', ()=>{
     document.querySelector('.input-senha').value = '';
 });
 
+
+
 async function login(email,senha){
     let json = await axios.post('https://reqres.in/api/login',
         {
@@ -172,8 +133,17 @@ async function login(email,senha){
             let containerCartas = document.querySelector('.container-cartas');
             containerCartas.style.display = 'block';
             let containerLogin = document.querySelector('.container-login');
-            containerLogin.style.display = 'none';
-
+            containerLogin.style.display = 'block';
+            let containerSucesso = document.querySelector('.estado-login');
+            containerSucesso.style.display = 'block';
+            setTimeout( function() {
+                let containerLogin = document.querySelector('.container-login');
+                containerLogin.style.display = 'none';
+                let containerSucesso = document.querySelector('.estado-login');
+                containerSucesso.style.display = 'none';
+              }, 2000 );
+            document.querySelector('.input-email').value = '';
+            document.querySelector('.input-senha').value = '';
         })
         .catch(function(error){
             console.log('Error: '+error.response.data.error);
@@ -183,21 +153,7 @@ async function login(email,senha){
                 let alerta = document.querySelector('.alerta-bd');
                 alerta.style.display = 'block';
             }
-            /*
-            if (erro === 'Missing password') {
-                let alerta = document.querySelector('.alerta-senha');
-                alerta.style.display = 'block';
-                console.log('entrei no if')
-                document.querySelector('.input-senha').value = '';
-            }
-            if (erro === 'Missing email or username') {
-                let alerta = document.querySelector('.alerta-email');
-                alerta.style.display = 'block';
-                console.log('entrei no if')
-                document.querySelector('.input-email').value = '';
-                document.querySelector('.input-senha').value = '';
-            }
-            */
+            
             
         });
 };

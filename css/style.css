@@ -487,21 +487,21 @@ div.container-login form .btn-fechar:hover{
 
 div.container-login div.alerta-senha{
     position: absolute;
-    right: 680px;
+    right: 665px;
     bottom: 460px;
     z-index: 10;
     display: none;
 }
 div.container-login div.alerta-email{
     position: absolute;
-    right: 680px;
+    right: 670px;
     bottom: 460px;
     z-index: 10;
     display: none;
 }
 div.container-login div.alerta-tres{
     position: absolute;
-    right: 575px;
+    right: 572px;
     bottom: 460px;
     z-index: 10;
     display: none;
@@ -577,6 +577,12 @@ div.container-login div.alerta-bd{
     width: 168px;
     height: 246px;
 }
+.cartaNome{
+    cursor: pointer;
+}
+.cartaAleatoria{
+    cursor: pointer;
+}
 
 .verso-carta, .verso-carta2,
 .verso-carta3, .verso-carta4,
@@ -586,6 +592,37 @@ div.container-login div.alerta-bd{
     margin-left: 10px;
     width: 168px;
     height: 246px;
+}
+.estado-login{
+    background-color: white;
+    max-width: 400px;
+    width: 70%;
+    height: 40%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 4px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.estado-login svg{
+    width: 120px;
+    height: 100px;
+    color: #00A826;
+    margin-top: 20px;
+}
+.estado-login p{
+    font-weight: 900;
+    
+}
+.login-efetuado{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 60px;
 }
 
 @media only screen and (max-device-width: 900px) {
@@ -601,6 +638,64 @@ div.container-login div.alerta-bd{
     }
     .conteudo-api{
         margin-top: 70px;
+    }
+    div.container-login{
+        position: absolute;
+        background-color: rgba(15, 15, 15, 0.7);
+        width: 100%;
+        height: 100vh;
+        z-index: 10000;
+        display: none;
+    }
+    
+    div.container-login form{
+            background-color: white;
+            max-width: 400px;
+            width: 70%;
+            height: 40%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            border: 4px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    }
+    
+    div.container-login form div.div-login{
+        width: 250px;
+    }
+    
+    div.container-login form input{
+        margin-top: 15px;
+        width: 250px;
+        height: 35px;
+        border: 1px solid black;
+        border-radius: 5px;
+    
+    }
+    
+    div.container-login div.alerta-senha{
+        right: 89px;
+        bottom: 418px;
+    }
+    div.container-login div.alerta-email{
+        right: 89px;
+        bottom: 418px;
+    }
+    div.container-login div.alerta-tres{
+        right: 80px;
+        bottom: 416px;
+        font-size: 13px;
+    }
+    div.container-login div.alerta-tres p{
+        width: 220px;
+        text-align: center;
+    }
+    div.container-login div.alerta-bd{
+        right: 80px;
+        bottom: 415px;
     }
 
 }
