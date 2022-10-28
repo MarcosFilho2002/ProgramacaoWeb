@@ -415,7 +415,8 @@ a:hover{
     }
     .menu-mobile{
         display: none;
-     }
+    }
+    
     
 }    
 /*Segunda parte do projeto*/
@@ -604,3 +605,39 @@ div.container-login div.alerta-bd{
     }
 
 }
+@media (min-width: 1000px) and (max-width: 1800px) { 
+
+    div.container-login div.alerta-senha{
+        position: absolute;
+        right: 625px;
+        bottom: 460px;
+        z-index: 10;
+        display: none;
+    }
+    div.container-login div.alerta-email{
+        position: absolute;
+        right: 625px;
+        bottom: 460px;
+        z-index: 10;
+        display: none;
+    }
+    div.container-login div.alerta-tres{
+        position: absolute;
+        right: 535px;
+        bottom: 460px;
+        z-index: 10;
+        display: none;
+    }
+    div.container-login div.alerta-bd{
+        position: absolute;
+        right: 610px;
+        bottom: 460px;
+        z-index: 10;
+        display: none;
+    }
+
+
+
+
+
+}    
