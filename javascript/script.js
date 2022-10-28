@@ -3,7 +3,7 @@
 let container = document.querySelector('.aleatorio');
 document.querySelector('.cartaAleatoria').addEventListener('click', async () =>{
     let json = await axios.get('https://db.ygoprodeck.com/api/v7/randomcard.php');
-    console.log(json);
+    //console.log(json);
     let li = document.createElement('li');
     let p = document.createElement('p');
     let img = document.createElement('img');
@@ -22,8 +22,8 @@ let container2 = document.querySelector('.cartaInput');
 document.querySelector('.cartaNome').addEventListener('click', async () =>{
     let cardName = document.querySelector('.cardName').value;
     let json = await axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?name='+cardName);
-    console.log(cardName);
-    console.log(json);
+    //console.log(cardName);
+    //console.log(json);
     let li = document.createElement('li');
     let p = document.createElement('p');
     let img = document.createElement('img');
@@ -73,8 +73,8 @@ document.querySelector('.verso-carta8').addEventListener('click', async () =>{
 async function carregaCartas(){
     let cartas = axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php')
     .then(function (response) {
-        console.log(response.data.data);
-        console.log(response.data.data[0].name);
+        //console.log(response.data.data);
+        //console.log(response.data.data[0].name);
         let tamanhoArray = response.data.data.length;
         const todasCartas = [];
         for(let i = 0; i < tamanhoArray; i++){
@@ -84,7 +84,7 @@ async function carregaCartas(){
         todasCartas.forEach(element => {
             let select = document.querySelector("#cartas");
             select.append(new Option(element,element));
-            console.log(element);
+            //console.log(element);
         });
     });
 };
@@ -191,12 +191,12 @@ document.querySelector('.btn-entrar').addEventListener('click', ()=>{
     let email = document.querySelector('.input-email').value;
     let senha = document.querySelector('.input-senha').value;
 
-    console.log("Email: "+email.length+" Senha: "+senha.length);
+    //console.log("Email: "+email.length+" Senha: "+senha.length);
 
     if(email.length === 0){
         let alerta = document.querySelector('.alerta-email');
         alerta.style.display = 'block';
-        console.log('entrei no if')
+        //console.log('entrei no if')
         document.querySelector('.input-email').value = '';
         document.querySelector('.input-senha').value = '';
 
