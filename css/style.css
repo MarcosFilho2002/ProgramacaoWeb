@@ -730,9 +730,8 @@ div.container-login div.alerta-bd{
         z-index: 10;
         display: none;
     }
-
-
-
-
-
 }    
+.aviso{
+    margin-left: 0.6%;
+    color: red;
+}

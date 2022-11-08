@@ -18,22 +18,7 @@ document.querySelector('.cartaAleatoria').addEventListener('click', async () =>{
 
 
 
-let container2 = document.querySelector('.cartaInput');
-document.querySelector('.cartaNome').addEventListener('click', async () =>{
-    let cardName = document.querySelector('.cardName').value;
-    let json = await axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?name='+cardName);
-    //console.log(cardName);
-    //console.log(json);
-    let li = document.createElement('li');
-    let p = document.createElement('p');
-    let img = document.createElement('img');
-    let texto = document. createTextNode(json.data.data[0].name);
-    p.appendChild(texto);
-    li.appendChild(p);
-    img.src = json.data.data[0].card_images[0].image_url_small;
-    li.appendChild(img);
-    container2.appendChild(li);
-});
+
 
 
 document.querySelector('.verso-carta').addEventListener('click', async () =>{
@@ -218,4 +203,53 @@ document.querySelector('.btn-entrar').addEventListener('click', ()=>{
         login(email,senha);
         
     });
+});
+
+document.querySelector('.cartaNome').addEventListener('click',()=>{
+    let input = document.querySelector('.cardName').value;
+
+    if(input.length === 0){
+        let aviso = document.querySelector('.aviso');
+        aviso.textContent = 'O nome da carta não pode ser vazio!';
+    }
+    else{
+        getCarta(input);
+    }
+});
+let container2 = document.querySelector('.cartaInput');
+/*
+        document.querySelector('.cartaNome').addEventListener('click', async () =>{
+            let cardName = document.querySelector('.cardName').value;
+            let json = await axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?name='+cardName);
+            //console.log(cardName);
+            //console.log(json);
+            let li = document.createElement('li');
+            let p = document.createElement('p');
+            let img = document.createElement('img');
+            let texto = document. createTextNode(json.data.data[0].name);
+            p.appendChild(texto);
+            li.appendChild(p);
+            img.src = json.data.data[0].card_images[0].image_url_small;
+            li.appendChild(img);
+            container2.appendChild(li);
+        });
+*/
+async function getCarta(cardName) {
+    let json = await axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?name='+cardName);
+    //console.log(cardName);
+    //console.log(json);
+    let li = document.createElement('li');
+    let p = document.createElement('p');
+    let img = document.createElement('img');
+    let texto = document. createTextNode(json.data.data[0].name);
+    p.appendChild(texto);
+    li.appendChild(p);
+    img.src = json.data.data[0].card_images[0].image_url_small;
+    li.appendChild(img);
+    container2.appendChild(li);
+}
+
+document.querySelector('.cardName').addEventListener('click',()=>{
+    let aviso = document.querySelector('.aviso');
+        aviso.textContent = '';
 });
