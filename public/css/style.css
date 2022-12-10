@@ -735,3 +735,109 @@ div.container-login div.alerta-bd{
     margin-left: 0.6%;
     color: red;
 }
+
+/**************************************/
+div.container-registrar{
+    position: absolute;
+    background-color: rgba(15, 15, 15, 0.7);
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+div.container-registrar form{
+    background-color: white;
+    max-width: 400px;
+    width: 70%;
+    height: 40%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 4px solid #ccc;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+div.div-registrar{
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+div.container-registrar form div.div-registrar{
+width: 250px;
+}
+
+div.container-registrar form input{
+margin-top: 15px;
+width: 250px;
+height: 35px;
+border: 1px solid black;
+border-radius: 5px;
+
+}
+
+div.container-registrar form label,div.container-registrar form select{
+    margin-top: 15px;
+}
+
+div.container-registrar form button, .btn-cadastrar{
+margin-top: 30px;
+width: 100px;
+height: 35px;
+border: 1px solid;
+border-radius: 3px;
+background: none;
+cursor: pointer;
+transition: all 200ms ease-in-out;
+font-weight: 900;
+color: white;
+}
+div.container-registrar form .btn-cadastrar{
+background-color: #00A826;
+border: #00A826;
+width: 100px;
+margin-left: 70px;
+}
+div.container-registrar form .btn-cadastrar:hover{
+background-color: #00cf30;
+
+}
+div.container-registrar form .btn-fechar-registro{
+margin-left: 45px;
+background-color: #a50000;
+border: #a50000;
+}
+div.container-registrar form .btn-fechar-registro:hover{
+background-color: #c80000;
+
+}
+
+div.container-registrar div.alerta-senha{
+position: absolute;
+right: 665px;
+bottom: 460px;
+z-index: 10;
+display: none;
+}
+div.container-registrar div.alerta-email{
+position: absolute;
+right: 670px;
+bottom: 460px;
+z-index: 10;
+display: none;
+}
+div.container-registrar div.alerta-tres{
+position: absolute;
+right: 572px;
+bottom: 460px;
+z-index: 10;
+display: none;
+}
+div.container-registrar div.alerta-bd{
+position: absolute;
+right: 650px;
+bottom: 460px;
+z-index: 10;
+display: none;
+}

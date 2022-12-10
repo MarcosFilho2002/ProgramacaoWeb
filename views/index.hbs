@@ -11,12 +11,12 @@
             <div class="alerta-bd">
                 <p>Error: Usuário não encontrado!</p>
             </div>
-            <form class="form-login">
+            <form class="form-login" action="/login" method="POST">
                 <div class="div-login">
-                    <input type="text" placeholder="Email" class="input-email">
-                    <input type="password" placeholder="Senha" class="input-senha">
+                    <input type="text" placeholder="Email" name="email" class="input-email">
+                    <input type="password" placeholder="Senha" name="senha" class="input-senha">
                     <br>
-                    <button type="button" class="btn-entrar">Entrar</button>
+                    <button type="submit" class="btn-entrar">Entrar</button>
                     <button type="button" class="btn-fechar">Fechar</button>
                 </div>
             </form>
@@ -31,6 +31,67 @@
                 </div>
             </div>
         </div>
+       
+        <div class="container-registrar">
+            <div class="alerta-senha">
+                <p>Error: Campo senha vazio!</p>
+            </div>
+            <div class="alerta-email">
+                <p>Error: Campo email vazio!</p>
+            </div>
+            <div class="alerta-tres">
+                <p>Error: Os campos devem ter no mínimo 3 caracteres!</p>
+            </div>
+            <div class="alerta-bd">
+                <p>Error: Usuário não encontrado!</p>
+            </div>
+        
+        <form action="/register" method="POST">
+            <div class="div-registrar">
+                <input type="text" name="emailRegistro" placeholder="Email">
+                <input type="password" name="senhaRegistro" placeholder="Senha">
+                
+                <label for="admin">Admin:</label>
+                    <select name="adminRegistro">
+                        <option value="true">Sim</option>
+                        <option value="false">Não</option>
+                    </select>
+            </div>
+            <input type="submit" value="Cadastrar" class="btn-cadastrar">
+            <button type="button" class="btn-fechar-registro">Fechar</button>
+        </form>
+            <div class="estado-registrar">
+                <div class="registro-efetuado">
+                    <p>Registro efetuado com sucesso!</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                    </svg>
+                    
+                </div>
+            </div>
+        </div>
+         <!--
+        <form action="/register" method="POST">
+
+            <div class="form-control">
+                <label for="emai">Email:</label>
+                <input type="text" name="emailRegistro" placeholder="Digite o email">
+            </div>
+            <div class="form-control">
+                <label for="senha">Senha:</label>
+                <input type="password" name="senhaRegistro" placeholder="Digite a senha">
+            </div>
+            <div class="form-control">
+                <label for="admin">Admin:</label>
+                    <select name="adminRegistro" id="cars">
+                        <option value="true">Sim</option>
+                        <option value="false">Não</option>
+                    </select>
+            </div>
+            <input type="submit" value="Cadastrar">
+        </form>
+        -->
         <div class="main">
             <div class="area-cabecalho">
                 <div class="logo-menu">
