@@ -37,18 +37,11 @@ app.post('/login',async function(req,res){
   
   const user = await User.logar(email,senha)
   console.log(user)
+  if(user == null){
+    
+  }
   res.render('index');
 })
-
-
-app.get('/sobre', async (req, res) => {
-  const users = await User.getUsers()
-  console.log(users);
-  //console.log(users[0]);
-  //console.log(users[0].email);
-  res.render('sobre',{users: users})
-})
-
 
 app.post('/register',function(req,res){
   const email = req.body.emailRegistro

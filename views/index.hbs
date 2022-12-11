@@ -13,8 +13,8 @@
             </div>
             <form class="form-login" action="/login" method="POST">
                 <div class="div-login">
-                    <input type="text" placeholder="Email" name="email" class="input-email">
-                    <input type="password" placeholder="Senha" name="senha" class="input-senha">
+                    <input type="email" placeholder="Email" name="email" class="input-email" required>
+                    <input type="password" placeholder="Senha" name="senha" class="input-senha" required> 
                     <br>
                     <button type="submit" class="btn-entrar">Entrar</button>
                     <button type="button" class="btn-fechar">Fechar</button>
@@ -48,8 +48,8 @@
         
         <form action="/register" method="POST">
             <div class="div-registrar">
-                <input type="text" name="emailRegistro" placeholder="Email">
-                <input type="password" name="senhaRegistro" placeholder="Senha">
+                <input type="email" name="emailRegistro" placeholder="Email" required>
+                <input type="password" name="senhaRegistro" placeholder="Senha" required>
                 
                 <label for="admin">Admin:</label>
                     <select name="adminRegistro">
