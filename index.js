@@ -27,10 +27,7 @@ app.use(serverSession({
 
 
 app.get('/', (req, res) => {
-  const imagens =  Image.getImages;
-  console.log(imagens)
-  
-  res.render('index',{imagens:imagens});
+  res.render('index');
 })
 
 //Testar validação
