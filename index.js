@@ -8,29 +8,45 @@ const conn = require('./db/conn')
 const UserController = require('./controllers/UserController')
 const User = require('./models/User')
 
+const serverSession = require('express-session')
+
+const Image = require('./models/Image');
+const fs = require('fs');
+const multer = require('multer');
+
 app.use('/public', express.static(__dirname + '/public'))
 app.engine('hbs', exphbs.engine({extname: '.hbs'}));
 app.set('view engine', 'hbs');
 app.use(express.urlencoded({extended: false}))
 
+app.use(serverSession({
+  secret: '4004-CrM7-Whe2Ko',
+  resave: true,
+  saveUninitialized: true
+}));
+
 
 app.get('/', (req, res) => {
-  res.render('index');
+  const imagens =  Image.getImages;
+  console.log(imagens)
+  
+  res.render('index',{imagens:imagens});
 })
-/*
-app.post('/register'), function(req,res){
-  const email = req.body.emailRegistrar
-  const senha = req.body.senhaRegistrar
-  const admin = req.body.admin
 
-  const user = new User(email,senha,admin)
-  console.log(admin);      
+//Testar validação
+app.get('/oi', valida,(req, res) => {
+  res.end("oi");
+})
 
-  user.save()
+function valida (req, res, next) {
+  if(!req.session.usuario) {
+      console.log("Autenticação: Acesso negado, não existe o token!")
+      return res.redirect('/');
+  }
+    console.log("Autenticação: Acesso permitido,existe o token!")
+    return next();
+};
 
-  res.redirect('/')
-}
-*/
 app.post('/login',async function(req,res){
   const email = req.body.email
   const senha = req.body.senha
@@ -39,6 +55,8 @@ app.post('/login',async function(req,res){
   console.log(user)
   if(user == null){
     
+  }else{
+    req.session.usuario = user;
   }
   res.render('index');
 })
@@ -55,6 +73,22 @@ app.post('/register',function(req,res){
   res.redirect('/')
 })
 //*********************
+
+const storage = multer.memoryStorage()
+const upload = multer({ storage: storage })
+
+app.post('/upload', upload.single('image'),valida, (req, res) => {
+  const image = req.file;
+  const nome = image.originalname
+  const buffer = image.buffer
+  const tipo = image.mimetype
+  const imagem = new Image(nome,buffer,tipo)
+  imagem.save();
+  console.log(imagem)
+  res.redirect('/') 
+})
+
+//***********************
 
 app.listen(3000, () => {
   console.log('Server online')

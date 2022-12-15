@@ -841,3 +841,9 @@ bottom: 460px;
 z-index: 10;
 display: none;
 }
+.conteudo-api{
+    margin-bottom: 50px;
+}
+.container-cartas{
+    visibility: hidden;
+}

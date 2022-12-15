@@ -162,7 +162,13 @@
                 <button class="cartaAleatoria margem-left-10px">Carta Aleatória</button>
                 <ul class="aleatorio"></ul>
             </div>
+            <form action="/upload" enctype="multipart/form-data" method="POST">
+                    <input type="file" name="image" accept="image/*">
+                    <input type="submit" value="Upload">
+            </form>
+            
             <div class="container-cartas">
+                
                 <img src="/public/images/verso_carta.jpg" alt="" class="verso-carta">
                 <img src="/public/images/verso_carta.jpg" alt="" class="verso-carta2">
                 <img src="/public/images/verso_carta.jpg" alt="" class="verso-carta3">
@@ -172,6 +178,9 @@
                 <img src="/public/images/verso_carta.jpg" alt="" class="verso-carta7">
                 <img src="/public/images/verso_carta.jpg" alt="" class="verso-carta8">
             </div>
-        </div>    
+        </div>  
+
+        
+
         </div> <!--FIM MAIN-->       
         <script src="/public/js/script.js"></script>  

@@ -17,18 +17,3 @@ async function run(){
 run()
 
 module.exports = client
-
-
-/*
-const mongoClient = require("mongodb").MongoClient;
-mongoClient.connect("")
-    .then(conn => global.conn = conn.db("db_web"))
-    .catch(err => console.log(err))
-
-
-function findAll() {
-    return global.conn.collection("users").find().toArray();
-}
-
-module.exports = { findAll }
-*/
