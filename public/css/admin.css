@@ -1,0 +1,51 @@
+.addPost{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+.createPost{
+    margin-top: 10px;
+    border: 2px solid black;
+    width: 500px;
+    height: 220px;
+    margin-bottom: 20px;
+}
+
+.createPost input{
+    width: 200px;
+    height: 25px;
+}
+
+.tituloPost, .conteudoPost, .dataPost{
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    width: 200px;
+}
+
+.tituloPost{
+    margin-top: 10px;
+}
+
+
+.enviarPost{
+    text-align: center;
+}
+
+.enviarPost input{
+    width: 100px;
+    border-color: gray;
+    border: solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    font-weight: bold;
+}
+
+.enviarPost input:hover{
+    background-color: #00A826;
+}

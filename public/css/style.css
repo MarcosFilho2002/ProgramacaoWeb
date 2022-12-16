@@ -847,3 +847,48 @@ display: none;
 .container-cartas{
     visibility: hidden;
 }
+
+.addPost{
+    display: none;
+}
+
+.posts h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.post{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+.post h4{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.post p{
+    text-align: justify;
+    margin-left: 2px;
+}
+.post span{
+    font-size: 12px;
+}
+
+.uploads{
+    text-align: center;
+}
+
+.uploads h1{
+    margin-bottom: 25px;
+}
+
+.buscaDePost{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.buscaDePost label{
+    font-weight: bold;
+}
